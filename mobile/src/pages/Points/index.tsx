@@ -67,6 +67,8 @@ const Points: React.FC = () => {
 
       const { latitude, longitude } = location.coords;
 
+      //console.log(latitude, longitude);
+
       setInitialPosition([latitude, longitude]);
     }
 
@@ -83,6 +85,7 @@ const Points: React.FC = () => {
         },
       })
       .then((response) => {
+        //console.log(response.data);
         setPoints(response.data);
       });
   }, [selectedItems]);
